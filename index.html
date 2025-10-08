@@ -1,68 +1,6 @@
 <!DOCTYPE html>
 <html lang="en">
-
-<head>
-  <meta charset="UTF-8">
-  <title>Coding Background Music</title>
-  <style>
-    body {
-      background: #1e1e1e;
-      color: #00ff9d;
-      font-family: monospace;
-      display: flex;
-      justify-content: center;
-      align-items: center;
-      height: 100vh;
-      flex-direction: column;
-    }
-    h1 {
-      font-size: 2rem;
-      margin-bottom: 1rem;
-    }
-    button {
-      background: #00ff9d;
-      color: #1e1e1e;
-      border: none;
-      padding: 10px 20px;
-      font-size: 1rem;
-      cursor: pointer;
-      border-radius: 5px;
-      display: none; /* shows if autoplay blocked */
-    }
-  </style>
-</head>
-<body>
-
-  <h1>💻 Coding with Vibes 🎧</h1>
-
-  <!-- Background music -->
-  <audio id="Anni.mp3" src="Anni.mp3" loop preload="auto"></audio>
-
-  <!-- Fallback button if autoplay blocked -->
-  <button id="play-btn">▶ Play Music</button>
-
-  <script>
-    const audio = document.getElementById('bg-music');
-    const btn = document.getElementById('play-btn');
-
-    // Set lower volume to increase chance of autoplay working
-    audio.volume = 0.4;
-
-    // Try to autoplay
-    audio.play().then(() => {
-      console.log("Autoplay started ✅");
-    }).catch(() => {
-      // If blocked, show fallback play button
-      btn.style.display = 'inline-block';
-      btn.addEventListener('click', () => {
-        audio.play();
-        btn.style.display = 'none';
-      });
-    });
-  </script>
-
-</body>
-</html>
+  
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
@@ -544,4 +482,5 @@
 
 
 </html>
+
 
