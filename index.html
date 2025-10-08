@@ -2,6 +2,68 @@
 <html lang="en">
 
 <head>
+  <meta charset="UTF-8">
+  <title>Coding Background Music</title>
+  <style>
+    body {
+      background: #1e1e1e;
+      color: #00ff9d;
+      font-family: monospace;
+      display: flex;
+      justify-content: center;
+      align-items: center;
+      height: 100vh;
+      flex-direction: column;
+    }
+    h1 {
+      font-size: 2rem;
+      margin-bottom: 1rem;
+    }
+    button {
+      background: #00ff9d;
+      color: #1e1e1e;
+      border: none;
+      padding: 10px 20px;
+      font-size: 1rem;
+      cursor: pointer;
+      border-radius: 5px;
+      display: none; /* shows if autoplay blocked */
+    }
+  </style>
+</head>
+<body>
+
+  <h1>💻 Coding with Vibes 🎧</h1>
+
+  <!-- Background music -->
+  <audio id="Anni" src="music.mp3" loop preload="auto"></audio>
+
+  <!-- Fallback button if autoplay blocked -->
+  <button id="play-btn">▶ Play Music</button>
+
+  <script>
+    const audio = document.getElementById('bg-music');
+    const btn = document.getElementById('play-btn');
+
+    // Set lower volume to increase chance of autoplay working
+    audio.volume = 0.4;
+
+    // Try to autoplay
+    audio.play().then(() => {
+      console.log("Autoplay started ✅");
+    }).catch(() => {
+      // If blocked, show fallback play button
+      btn.style.display = 'inline-block';
+      btn.addEventListener('click', () => {
+        audio.play();
+        btn.style.display = 'none';
+      });
+    });
+  </script>
+
+</body>
+</html>
+<head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>For Someone Special ❤️</title>
@@ -180,7 +242,7 @@
             <!-- Step 1: Initial Reveal -->
             <div class="step active" id="step1">
                 <div class="emoji heart-beat">❤️</div>
-                <h1 class="text-4xl md:text-5xl font-bold mb-6 text-gradient">Hey Beautiful</h1>
+                <h1 class="text-4xl md:text-5xl font-bold mb-6 text-gradient">Hey Bykoo😘</h1>
                 <p class="text-xl text-gray-700 mb-8">I made something special for you...</p>
                 <button class="btn" id="start-btn">Let's Begin</button>
             </div>
@@ -188,10 +250,10 @@
             <!-- Step 2: Birthday Message -->
             <div class="step" id="step2">
                 <div class="emoji">🎉</div>
-                <h2 class="text-3xl md:text-4xl font-bold mb-6 text-gradient">Happy Birthday!</h2>
+                <h2 class="text-3xl md:text-4xl font-bold mb-6 text-gradient">Happy Fifth Month Anniversary Bykoo😘 !</h2>
                 <p class="text-lg text-gray-700 mb-6">
-                    On your special day, I want you to know how amazing you are. Your smile brightens my world, your
-                    laughter is my favorite melody, and your presence makes every moment magical.
+                    On our special day, I prey God for u that Ur and My Connection. ever break. You are my precious gift given by God to Me. Hence I always assume myself Gods Gifted
+                    But you r My Laxmi and I will never leave u alone. Bykoo I LoVe You 🥰
                 </p>
                 <button class="btn" id="next-btn-2">What makes you special?</button>
             </div>
@@ -203,7 +265,7 @@
                     <div class="reason-card">
                         <div class="emoji text-3xl">✨</div>
                         <h3 class="text-xl font-bold mb-2 text-pink-600">Your Kindness</h3>
-                        <p class="text-gray-700">The way you care about others is truly inspiring. You have the biggest
+                        <p class="text-gray-700">The way you care about ur family and me is truly inspiring. You have the biggest
                             heart.</p>
                     </div>
                     <div class="reason-card">
@@ -222,7 +284,7 @@
 
             <!-- Step 4: Memory Lane -->
             <div class="step" id="step4">
-                <div class="emoji">📸</div>
+                <div class="IMG_8205">📸</div>
                 <h2 class="text-3xl md:text-4xl font-bold mb-6 text-gradient">Remember When...</h2>
                 <div class="bg-gradient-to-r from-pink-200 to-rose-200 rounded-xl p-8 mb-8 flex flex-col justify-center items-center">
                     <img src="crush.webp" height="200" width="200" alt="" srcset="">
@@ -238,13 +300,13 @@
             <!-- Step 5: Final Wish -->
             <div class="step" id="step5">
                 <div class="emoji">🎂</div>
-                <h2 class="text-3xl md:text-4xl font-bold mb-6 text-gradient">My Birthday Wish For You</h2>
+                <h2 class="text-3xl md:text-4xl font-bold mb-6 text-gradient">My Wish For My Bykoo</h2>
                 <p class="text-lg text-gray-700 mb-8">
                     May your year be filled with joy, laughter, and dreams come true. May you always know how special
-                    you are to me and to everyone lucky enough to know you.
+                    you are to me that is My Laxmii.
                 </p>
                 <p class="text-xl font-semibold text-pink-600 mb-8">
-                    Happy Birthday, my crush! ❤️
+                    Happy Anniversary, my byooo! ❤️
                 </p>
                 <button class="btn" id="confetti-btn">Celebrate!</button>
                 <p class="mt-8 text-gray-500">Made with ❤️ just for you</p>
@@ -479,5 +541,6 @@
         updateProgressBar();
     </script>
 </body>
+
 
 </html>
